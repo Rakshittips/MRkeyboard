@@ -1,0 +1,6 @@
+{
+  "name": "MRkeyboard - iOS 26 Keyboard for Android",
+  "description": "MRkeyboard brings the iOS 26 Liquid Glass keyboard to Android with 9 languages, 8 themes, typing sounds, and interactive simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
