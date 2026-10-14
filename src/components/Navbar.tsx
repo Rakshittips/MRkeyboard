@@ -20,24 +20,11 @@ export const Navbar: React.FC = () => {
           </span>
         </a>
 
-        {/* Center links on desktop */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-white/70">
-          <a href="#features" className="hover:text-white transition-colors">
-            Features
-          </a>
-          <a href="#download" className="hover:text-white transition-colors">
-            Download
-          </a>
-          <a href="#install-guide" className="hover:text-white transition-colors">
-            Setup Guide
-          </a>
-        </nav>
-
-        {/* Right Nav Link: Single-line pristine glass pill */}
-        <div className="flex items-center gap-3">
+        {/* Right Nav Link: Single clean Download pill button */}
+        <div className="flex items-center">
           <a
             href="#download"
-            className="text-xs sm:text-sm font-semibold text-[#f6f1ff] px-4 sm:px-5 py-2 rounded-full bg-white/[0.08] hover:bg-white/[0.16] border border-white/[0.14] backdrop-blur-md transition-all whitespace-nowrap shadow-sm active:scale-95 cursor-pointer"
+            className="text-xs sm:text-sm font-semibold text-[#f6f1ff] px-4.5 sm:px-5 py-2 rounded-full bg-white/[0.08] hover:bg-white/[0.16] border border-white/[0.14] backdrop-blur-md transition-all whitespace-nowrap shadow-sm active:scale-95 cursor-pointer"
           >
             Download
           </a>
