@@ -4,7 +4,6 @@
  */
 
 import React from 'react';
-import { downloadApk, downloadEmojiFont, downloadMemojiPack } from './utils/downloadHelper';
 
 export default function App() {
   return (
@@ -13,12 +12,17 @@ export default function App() {
       <nav>
         <a className="brand" href="#top" id="top">
           <span className="brand-icon">
-            <i className="fa-solid fa-keyboard"></i>
+            <img
+              src="ic_launcher_bg.svg"
+              alt="MRkeyboard Logo"
+              width="40"
+              height="40"
+            />
           </span>
           <span>MRkeyboard</span>
         </a>
-        <a className="nav-link" href="#download">
-          Download
+        <a className="nav-link" href="#about">
+          About Me
         </a>
       </nav>
 
@@ -32,9 +36,14 @@ export default function App() {
             Liquid Glass keys, 9 languages, 8 themes, typing sound and voice typing.
           </p>
           <div className="cta-row">
-            <button className="btn" onClick={downloadApk}>
+            <a
+              className="btn"
+              href="https://devuploads.com/xrkjk49pm6yw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa-brands fa-android"></i> Download APK
-            </button>
+            </a>
             <a className="btn ghost" href="#features">
               See features
             </a>
@@ -124,12 +133,22 @@ export default function App() {
             <p>
               Pick your own emoji font file (.ttf) to show iPhone-style emoji in the emoji panel. Remove it to go back to Android emoji.
             </p>
-            <button className="btn ghost small" onClick={downloadEmojiFont}>
+            <a
+              className="btn ghost small"
+              href="https://t.me/Mr_Rakshit_2_0/984"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa-solid fa-download"></i> iOS Emoji (.ttf)
-            </button>
-            <button className="btn ghost small" onClick={downloadMemojiPack}>
+            </a>
+            <a
+              className="btn ghost small"
+              href="https://devuploads.com/j2jphhkqigmp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa-solid fa-file-zipper"></i> Memoji iOS (.zip)
-            </button>
+            </a>
           </article>
           <article className="card">
             <div className="ico">
@@ -197,15 +216,30 @@ export default function App() {
               Download the APK, install it, then turn it on in your keyboard settings.
             </p>
             <div className="cta-row" style={{ justifyContent: 'flex-start' }}>
-              <button className="btn" onClick={downloadApk}>
+              <a
+                className="btn"
+                href="https://devuploads.com/xrkjk49pm6yw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-solid fa-download"></i> Download APK
-              </button>
-              <button className="btn ghost" onClick={downloadEmojiFont}>
+              </a>
+              <a
+                className="btn ghost"
+                href="https://t.me/Mr_Rakshit_2_0/984"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-regular fa-face-smile"></i> iOS Emojis (.ttf)
-              </button>
-              <button className="btn ghost" onClick={downloadMemojiPack}>
+              </a>
+              <a
+                className="btn ghost"
+                href="https://devuploads.com/j2jphhkqigmp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-solid fa-file-zipper"></i> Memoji iOS (.zip)
-              </button>
+              </a>
             </div>
             <div className="steps">
               After downloading:
@@ -244,27 +278,99 @@ export default function App() {
         </div>
       </section>
 
+      {/* about me */}
+      <section id="about">
+        <div className="sec-head">
+          <h2>About Me — Rakshittips</h2>
+          <p>Creator & Developer of MRkeyboard (Mr_Rakshit_2.0)</p>
+        </div>
+        <div className="about-card">
+          <div className="about-header">
+            <div className="about-avatar">
+              <img src="ic_launcher_bg.svg" alt="Rakshittips Logo" />
+            </div>
+            <div className="about-meta">
+              <div className="about-badge">
+                <i className="fa-solid fa-code"></i> Developer & Tech Creator
+              </div>
+              <h3>Mr_Rakshit_2.0</h3>
+              <p className="about-tagline">Rakshittips Official</p>
+            </div>
+          </div>
+          <p className="about-bio">
+            Hey! I&apos;m <strong>Rakshit Dhakariya</strong>, known as <strong>Rakshittips (Mr_Rakshit_2.0)</strong>. I develop and curate custom Android enhancements, ports, and keyboards — bringing modern iOS 26 aesthetics, liquid glass blurs, fluid haptics, and custom emoji engines to Android users worldwide.
+          </p>
+          <div className="about-tags">
+            <span><i className="fa-brands fa-android"></i> Android Dev</span>
+            <span><i className="fa-solid fa-droplet"></i> Liquid Glass UI</span>
+            <span><i className="fa-regular fa-face-smile"></i> iOS Emoji Ports</span>
+            <span><i className="fa-solid fa-bolt"></i> Speed & Haptics</span>
+          </div>
+          <div className="about-actions">
+            <a
+              className="btn small"
+              href="https://rakshittips.github.io/Rakshittips/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-solid fa-globe"></i> Official Website
+            </a>
+            <a
+              className="btn ghost small"
+              href="https://t.me/Mr_Rakshit_2_0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-telegram"></i> Telegram Channel
+            </a>
+            <a
+              className="btn ghost small"
+              href="https://github.com/Rakshittips"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-github"></i> GitHub Profile
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* footer */}
       <footer>
-        <div className="ft-brand">
-          <i className="fa-solid fa-keyboard" style={{ color: 'var(--pink)' }}></i> MRkeyboard
+        <div className="ft-brand" style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+          <span className="brand-icon" style={{ width: 28, height: 28, borderRadius: 8, boxShadow: '0 2px 10px rgba(0, 229, 255, 0.25)' }}>
+            <img
+              src="ic_launcher_bg.svg"
+              alt="MRkeyboard"
+              width="28"
+              height="28"
+            />
+          </span>
+          <span>MRkeyboard</span>
         </div>
         <div className="ft-made">
           Made with 💗 by{' '}
-          <a href="https://rakshittips.github.io" target="_blank" rel="noopener noreferrer">
+          <a href="https://rakshittips.github.io/Rakshittips/index.html" target="_blank" rel="noopener noreferrer">
             Rakshittips
           </a>{' '}
           (Mr_Rakshit_2.0)
         </div>
         <div className="ft-links">
           <a href="#features">Features</a> · 
-          <button onClick={downloadApk}>Download APK</button> · 
-          <a href="#download">Setup Guide</a>
+          <a
+            href="https://devuploads.com/xrkjk49pm6yw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download APK
+          </a> · 
+          <a href="#download">Setup Guide</a> · 
+          <a href="#about">About Me</a>
         </div>
         <div>
           <a
             className="ft-dev"
-            href="https://rakshittips.github.io"
+            href="https://rakshittips.github.io/Rakshittips/index.html"
             target="_blank"
             rel="noopener noreferrer"
           >

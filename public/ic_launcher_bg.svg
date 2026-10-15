@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Outer Glow Filter -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Neon Rim Gradient -->
+    <linearGradient id="rim-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="45%" stop-color="#3b82f6" />
+      <stop offset="85%" stop-color="#c026d3" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- MR Text Gradient -->
+    <linearGradient id="mr-grad" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="40%" stop-color="#2563eb" />
+      <stop offset="80%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#e879f9" />
+    </linearGradient>
+
+    <!-- Keycaps Gradient -->
+    <linearGradient id="key-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+    
+    <!-- Key Shadow Filter -->
+    <filter id="key-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Outer Glow -->
+  <rect x="36" y="36" width="440" height="440" rx="110" ry="110" fill="none" stroke="url(#rim-grad)" stroke-width="14" opacity="0.45" filter="url(#neon-glow)" />
+
+  <!-- Base Squircle -->
+  <rect x="40" y="40" width="432" height="432" rx="108" ry="108" fill="#080612" />
+
+  <!-- Inner Stroke Highlight -->
+  <rect x="42" y="42" width="428" height="428" rx="106" ry="106" fill="none" stroke="url(#rim-grad)" stroke-width="7" />
+
+  <!-- Subtle Top Gloss Curve -->
+  <path d="M 60 140 C 120 70, 392 70, 452 140 C 350 110, 160 110, 60 140 Z" fill="#ffffff" opacity="0.06" />
+
+  <!-- "MR" Stylized Logo -->
+  <g transform="translate(0, -6)">
+    <!-- M -->
+    <path d="M 124 246 
+             L 164 136 
+             C 168 125, 180 125, 186 134 
+             L 218 190 
+             L 252 134 
+             C 258 125, 270 125, 274 136 
+             L 300 216
+             C 304 228, 292 240, 280 240
+             C 270 240, 263 232, 260 223
+             L 242 168
+             L 212 216
+             C 207 224, 197 224, 192 216
+             L 168 174
+             L 142 244
+             C 139 252, 130 256, 122 253
+             C 114 249, 120 236, 124 246 Z" 
+          fill="url(#mr-grad)" 
+          stroke="url(#mr-grad)" 
+          stroke-width="12" 
+          stroke-linejoin="round" 
+          stroke-linecap="round" />
+
+    <!-- R -->
+    <path d="M 276 244 
+             L 298 140
+             C 301 126, 314 118, 330 118
+             L 364 118
+             C 396 118, 412 136, 408 164
+             C 404 186, 388 200, 362 204
+             L 394 242
+             C 400 250, 395 260, 384 260
+             C 376 260, 370 255, 365 248
+             L 336 210
+             L 312 210
+             L 305 244
+             C 303 253, 294 258, 285 256
+             C 277 254, 274 248, 276 244 Z
+             M 320 188 
+             L 354 188 
+             C 372 188, 382 178, 384 164 
+             C 386 150, 376 142, 358 142 
+             L 326 142 
+             Z" 
+          fill="url(#mr-grad)" 
+          stroke="url(#mr-grad)" 
+          stroke-width="10" 
+          stroke-linejoin="round" 
+          stroke-linecap="round" />
+  </g>
+
+  <!-- iOS Keyboard Visual Bracket & Keys -->
+  <g filter="url(#key-shadow)" transform="translate(0, 8)">
+    <!-- Outer Frame Bracket [ ] -->
+    <path d="M 142 272
+             C 126 272, 114 284, 114 300
+             L 114 366
+             C 114 384, 128 398, 146 398
+             L 186 398
+             C 192 398, 196 393, 196 386
+             C 196 379, 192 374, 186 374
+             L 146 374
+             C 139 374, 134 369, 134 362
+             L 134 304
+             C 134 297, 139 292, 146 292
+             C 152 292, 156 287, 156 282
+             C 156 276, 151 272, 142 272 Z"
+          fill="url(#key-grad)" />
+
+    <path d="M 370 272
+             C 386 272, 398 284, 398 300
+             L 398 366
+             C 398 384, 384 398, 366 398
+             L 326 398
+             C 320 398, 316 393, 316 386
+             C 316 379, 320 374, 326 374
+             L 366 374
+             C 373 374, 378 369, 378 362
+             L 378 304
+             C 378 297, 373 292, 366 292
+             C 360 292, 356 287, 356 282
+             C 356 276, 361 272, 370 272 Z"
+          fill="url(#key-grad)" />
+
+    <!-- Top Keycaps Row (5 keys) -->
+    <rect x="156" y="272" width="28" height="30" rx="9" fill="url(#key-grad)" />
+    <rect x="198" y="272" width="28" height="30" rx="9" fill="url(#key-grad)" />
+    <rect x="242" y="272" width="28" height="30" rx="9" fill="url(#key-grad)" />
+    <rect x="286" y="272" width="28" height="30" rx="9" fill="url(#key-grad)" />
+    <rect x="328" y="272" width="28" height="30" rx="9" fill="url(#key-grad)" />
+
+    <!-- Middle Keycaps Row (4 keys) -->
+    <rect x="172" y="314" width="32" height="30" rx="9" fill="url(#key-grad)" />
+    <rect x="220" y="314" width="32" height="30" rx="9" fill="url(#key-grad)" />
+    <rect x="268" y="314" width="32" height="30" rx="9" fill="url(#key-grad)" />
+    <rect x="316" y="314" width="32" height="30" rx="9" fill="url(#key-grad)" />
+
+    <!-- Bottom Spacebar Keycap -->
+    <rect x="190" y="356" width="132" height="28" rx="10" fill="url(#key-grad)" />
+  </g>
+</svg>
