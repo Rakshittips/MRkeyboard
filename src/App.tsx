@@ -6,6 +6,14 @@
 import React from 'react';
 
 export default function App() {
+  const [copied, setCopied] = React.useState(false);
+
+  const handleCopyUpi = () => {
+    navigator.clipboard.writeText('rakshitdhakariya6@oksbi');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
   return (
     <div className="wrap">
       {/* nav */}
@@ -331,6 +339,78 @@ export default function App() {
             >
               <i className="fa-brands fa-github"></i> GitHub Profile
             </a>
+            <a
+              className="btn small"
+              href="#donate"
+              style={{
+                background: 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)',
+                boxShadow: '0 8px 20px rgba(16, 185, 129, 0.35)',
+              }}
+            >
+              <i className="fa-solid fa-heart"></i> Support &amp; Donate
+            </a>
+          </div>
+        </div>
+
+        {/* Support & Donate (UPI) Card */}
+        <div className="donate-card" id="donate">
+          <div className="donate-head">
+            <div className="donate-icon">
+              <i className="fa-solid fa-heart"></i>
+            </div>
+            <div>
+              <h3>Support &amp; Donate</h3>
+              <p>Support MRkeyboard development &amp; future iOS 26 updates</p>
+            </div>
+          </div>
+          <div className="donate-body">
+            <div>
+              <div className="upi-box">
+                <div className="upi-label">
+                  <i className="fa-solid fa-shield-halved"></i> Official UPI ID
+                </div>
+                <div className="upi-value-row">
+                  <span className="upi-id">rakshitdhakariya6@oksbi</span>
+                  <button className="upi-copy-btn" onClick={handleCopyUpi}>
+                    <i className={copied ? 'fa-solid fa-check' : 'fa-regular fa-copy'}></i>
+                    {copied ? 'Copied! ✨' : 'Copy UPI ID'}
+                  </button>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                <a
+                  className="btn small"
+                  href="upi://pay?pa=rakshitdhakariya6@oksbi&amp;pn=Rakshit%20Dhakariya&amp;cu=INR&amp;tn=Support%20MRkeyboard"
+                  style={{
+                    background: 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)',
+                    boxShadow: '0 8px 20px rgba(16, 185, 129, 0.35)',
+                  }}
+                >
+                  <i className="fa-solid fa-mobile-screen"></i> Pay via UPI App
+                </a>
+              </div>
+
+              <div className="upi-apps">
+                <span>Google Pay</span>
+                <span>PhonePe</span>
+                <span>Paytm</span>
+                <span>BHIM UPI</span>
+                <span>SBI Yono</span>
+                <span>Any UPI App</span>
+              </div>
+            </div>
+
+            <div className="qr-box">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=upi%3A%2F%2Fpay%3Fpa%3Drakshitdhakariya6%40oksbi%26pn%3DRakshit%2520Dhakariya%26cu%3DINR%26tn%3DSupport%2520MRkeyboard"
+                alt="Scan UPI QR Code to Donate"
+                width="180"
+                height="180"
+                loading="lazy"
+              />
+              <p>Scan with Any UPI App</p>
+            </div>
           </div>
         </div>
       </section>
@@ -365,7 +445,8 @@ export default function App() {
             Download APK
           </a> · 
           <a href="#download">Setup Guide</a> · 
-          <a href="#about">About Me</a>
+          <a href="#about">About Me</a> · 
+          <a href="#donate">Support (UPI)</a>
         </div>
         <div>
           <a
